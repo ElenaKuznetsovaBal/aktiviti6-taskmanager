@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/elena-api")
 @RequiredArgsConstructor
-public class ElenaController {
+public class    ElenaController {
 
     private final ElenaService elenaService;
 
@@ -30,7 +30,7 @@ public class ElenaController {
         return elenaService.createElena(
                 elena.getEmail(),
                 elena.getPassword(),
-                elena.getRole()
+                Elena.Role.USER
         );
     }
 }

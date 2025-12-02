@@ -24,17 +24,15 @@ public class Elena {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Role role = Role.ELENA;
-
+    private Role role = Role.USER;
     @CreationTimestamp
     private LocalDateTime createdAt;
-
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Task> tasks = new ArrayList<>();
 
     public enum Role {
-        ELENA, ADMIN
+        USER, ADMIN
     }
 
     // Конструкторы

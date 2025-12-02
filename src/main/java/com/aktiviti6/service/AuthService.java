@@ -60,7 +60,7 @@ public class AuthService {
         Elena user = new Elena();
         user.setEmail(registerRequest.getEmail());
         user.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
-        user.setRole(Role.ELENA);
+        user.setRole(Role.USER);  // ← ИЗМЕНИТЬ с ELENA на USER
 
         elenaRepository.save(user);
 
